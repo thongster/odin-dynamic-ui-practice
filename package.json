@@ -1,0 +1,31 @@
+{
+  "name": "odin-dynamic-ui-practice",
+  "version": "1.0.0",
+  "description": "A practice assignment \"Dynamic User Interface Interactions\" from The Odin Project's Javascript course",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thongster/odin-dynamic-ui-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thongster/odin-dynamic-ui-practice/issues"
+  },
+  "homepage": "https://github.com/thongster/odin-dynamic-ui-practice#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2"
+  }
+}
