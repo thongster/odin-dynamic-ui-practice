@@ -18,8 +18,8 @@ header {
 }
 
 .navOptions {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
 }
 
 .navOptions ul {
@@ -34,9 +34,14 @@ header {
   margin: 0;
 }
 
-.navOptions > ul > li{
+.navOptions > ul > li {
   padding: 0.5rem;
   background-color: rgb(231, 238, 243);
+}
+
+.navOptions > ul > li:hover {
+  padding: 0.5rem;
+  background-color: rgb(208, 230, 245);
 }
 
 .hamburger {
@@ -51,11 +56,6 @@ header {
   margin: 0;
 }
 
-
-.visible {
-    display: flex;
-}
-
 .invisible {
-    display: none;
+  display: none;
 }
