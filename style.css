@@ -8,6 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   height: 4rem;
+  margin-bottom: 2rem;
 }
 
 .nav {
@@ -70,16 +71,52 @@ background-color: rgb(208, 230, 245);
 
 .carouselContainer {
     display: flex;
+    position: relative;
     width: 100%;
     height: 50vh;
-    overflow: scroll;
+    align-items: center;
 }
 
-.carouselContainer img {
+.slides {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.slides img {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
 
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0 2rem;
+}
+
+.controls button {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.controls img {
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: none;
+    border-radius: 100%;
+}
+
+.controls img:hover {
+    background-color: rgb(255, 243, 177);
 }

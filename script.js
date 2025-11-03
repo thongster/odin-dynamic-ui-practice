@@ -11,4 +11,13 @@ function hamburger() {
   });
 }
 
+function slideShow() {
+    const previousButton = document.querySelector(".previous")
+    const nextButton = document.querySelector(".next")
+
+    nextButton.addEventListener("click", () => {
+        
+    })
+}
+
 hamburger();
