@@ -1,6 +1,4 @@
-* {
-  border: 1px solid red;
-}
+
 
 body {
   padding: 1rem;
@@ -32,11 +30,15 @@ header {
   background-color: rgb(230, 233, 235);
   width: min-content;
   margin: 0;
+  border: none;
+  border-radius: 6px;
 }
 
 .navOptions > ul > li {
   padding: 0.5rem;
   background-color: rgb(231, 238, 243);
+  border: none;
+  border-radius: 6px;
 }
 
 .navOptions > ul > li:hover {
@@ -49,6 +51,12 @@ header {
   width: 3rem;
   padding: 0;
   margin-left: auto;
+  border: none;
+  border-radius: 6px;
+}
+
+.hamburger:hover {
+background-color: rgb(208, 230, 245);    
 }
 
 .hamburger > img {

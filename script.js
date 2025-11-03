@@ -1,8 +1,12 @@
 function hamburger() {
-  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".nav");
   const navOptions = document.querySelector(".navOptions");
 
-  hamburger.addEventListener("click", () => {
+  nav.addEventListener("mouseover", () => {
+    navOptions.classList.toggle("invisible");
+  });
+
+  nav.addEventListener("mouseout", () => {
     navOptions.classList.toggle("invisible");
   });
 }
