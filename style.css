@@ -13,27 +13,42 @@ header {
 }
 
 .nav {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
+  margin: auto 0;
+  width: min-content;
+}
+
+.navOptions {
+    display: flex;
+    justify-content: end;
 }
 
 .navOptions ul {
+  position: absolute;
   display: flex;
   flex-direction: column;
   list-style: none;
   gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(230, 233, 235);
+  width: min-content;
+  margin: 0;
+}
+
+.navOptions > ul > li{
+  padding: 0.5rem;
+  background-color: rgb(231, 238, 243);
 }
 
 .hamburger {
   height: 3rem;
   width: 3rem;
   padding: 0;
+  margin-left: auto;
 }
 
 .hamburger > img {
   height: 100%;
+  margin: 0;
 }
 
 
