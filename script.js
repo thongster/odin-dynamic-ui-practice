@@ -18,11 +18,11 @@ function slideShow() {
   const nextButton = document.querySelector('.next');
   const images = document.querySelector('.images');
   const imageList = document.querySelectorAll('.images img');
-  const buttonList = document.querySelectorAll(".carouselNav > button")
+  const buttonList = document.querySelectorAll('.carouselNav > button');
   let imagePlace = imageList.length - imageList.length;
   let moveImage = 0;
 
-  toggleActiveButton(imagePlace)
+  toggleActiveButton(imagePlace);
   nextButton.addEventListener('click', moveNext);
   previousButton.addEventListener('click', movePrevious);
   selectSlide();
@@ -32,57 +32,57 @@ function slideShow() {
   // multiply how many % widths to move based on imagePlace
   function moveNext() {
     if (imagePlace === imageList.length - 1) {
-        toggleActiveButton(imagePlace)
+      toggleActiveButton(imagePlace);
       imagePlace = imageList.length - imageList.length;
       moveImage = 0;
       images.style.transform = `translateX(${moveImage}%)`;
-        toggleActiveButton(imagePlace)
+      toggleActiveButton(imagePlace);
       return;
     }
-    toggleActiveButton(imagePlace)
+    toggleActiveButton(imagePlace);
     moveImage = (imagePlace + 1) * 100;
     images.style.transform = `translateX(-${moveImage}%)`;
     imagePlace++;
-    toggleActiveButton(imagePlace)
+    toggleActiveButton(imagePlace);
   }
 
   function movePrevious() {
     if (imagePlace === imageList.length - imageList.length) {
-        toggleActiveButton(imagePlace)
+      toggleActiveButton(imagePlace);
       imagePlace = imageList.length - 1;
       moveImage = imagePlace * 100;
       images.style.transform = `translateX(-${moveImage}%)`;
-        toggleActiveButton(imagePlace)
+      toggleActiveButton(imagePlace);
       return;
     }
-    toggleActiveButton(imagePlace)
+    toggleActiveButton(imagePlace);
     moveImage = (imagePlace - 1) * 100;
     images.style.transform = `translateX(-${moveImage}%)`;
     imagePlace--;
-    toggleActiveButton(imagePlace)
+    toggleActiveButton(imagePlace);
   }
 
   function selectSlide() {
     // determine old button to highlight
-    let oldActiveButton = imagePlace
+    let oldActiveButton = imagePlace;
     buttonList.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-            // disable highilight on old button
-            toggleActiveButton(oldActiveButton)
-            // determine and move X distance
-            moveImage = i * 100;
-            images.style.transform = `translateX(-${moveImage}%)`;
-            // activate highlight on new active button, reassign old button
-            toggleActiveButton(i)
-            oldActiveButton = i
-        })
-    })
+      btn.addEventListener('click', () => {
+        // disable highilight on old button
+        toggleActiveButton(oldActiveButton);
+        // determine and move X distance
+        moveImage = i * 100;
+        images.style.transform = `translateX(-${moveImage}%)`;
+        // activate highlight on new active button, reassign old button
+        toggleActiveButton(i);
+        oldActiveButton = i;
+      });
+    });
   }
 }
 
 function toggleActiveButton(imagePlace) {
-    const buttonList = document.querySelectorAll(".carouselNav > button")
-    buttonList[imagePlace].classList.toggle("carouselNavHover")
+  const buttonList = document.querySelectorAll('.carouselNav > button');
+  buttonList[imagePlace].classList.toggle('carouselNavHover');
 }
 
 hamburger();
